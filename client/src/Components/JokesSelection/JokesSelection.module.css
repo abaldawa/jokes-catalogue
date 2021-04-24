@@ -1,0 +1,31 @@
+.joke-selection__container {
+    display: flex;
+    align-items: center;
+}
+
+.margin-right--1rem {
+    margin-right: 1rem;
+}
+
+.margin-left--1rem {
+    margin-left: 1rem;
+}
+
+.fetch__button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.fetch__button--disabled {
+    background-color: #e7e7e7;
+    color: black;
+    cursor: not-allowed;
+}

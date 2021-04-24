@@ -1,0 +1,14 @@
+version: "3"
+services:
+  node_server:
+    container_name: jokes-catalogue
+    restart: always
+    build: .
+    environment:
+      - PORT=3000
+      - JOKE_ID_API_URL=https://api.jokes.one/joke?id={joke_id}
+      - JOKE_ID_PLACEHOLDER_IN_URL={joke_id}
+      - JOKE_IDS=["8P4i2CUrJhp5AgpXmcunxweF","AszLJCxU7fpGUNGcFkIMCAeF","8RoFzVZGHCNLuiEbo1pCgweF","g5EtGY8FnULzylplsP6yfweF","WHzviGc1CYrY13rW14GDeQeF","TmFB94pmJHJPLHLdgc3ugAeF","uB8539QI8_h49A_Z_mmiWQeF","k4q_CBe9A4PBeaTMTvyoFgeF","_XkdALmklKAZIJjCeSy_6weF","XarSN7SgbdQt3O5JVTcUwweF","jwsafpHBorxSg0aZLcwkvQeF"]
+      - JOKE_API_HEADERS={"x-jokesone-api-secret":""}
+    ports:
+      - "3000:3000"
