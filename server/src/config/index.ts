@@ -7,11 +7,11 @@
 import 'dotenv/config';
 
 interface EnvironmentVariables extends NodeJS.ProcessEnv {
-  PORT: string | undefined;
-  JOKE_ID_API_URL: string | undefined;
-  JOKE_ID_PLACEHOLDER_IN_URL: string | undefined;
-  JOKE_API_HEADERS: string | undefined; // This should be a valid JSON string
-  JOKE_IDS: string | undefined;
+  PORT?: string;
+  JOKE_ID_API_URL?: string;
+  JOKE_ID_PLACEHOLDER_IN_URL?: string;
+  JOKE_API_HEADERS?: string; // This should be a valid JSON string
+  JOKE_IDS?: string; // This should be a valid JSON array of strings
 }
 
 const env = process.env as EnvironmentVariables;
